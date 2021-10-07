@@ -1,6 +1,5 @@
-#include "rectangle.h"
 #include <iostream>
-
+#include "rectangle.h"
 using namespace std;
 
 int main()
@@ -8,11 +7,11 @@ int main()
 	double width = 1;
 	double height = 1;
 
-	Rectangle myRectangle(height, width);
+	Rectangle myRectangle;
 	cout << "myRectangle:" << endl;
 	cout << "------------" << endl;
-	cout << "Width: " << width << endl;
-	cout << "Height: " << height << endl;
+	cout << "Width: " << myRectangle.getWidth() << endl;
+	cout << "Height: " << myRectangle.getHeight() << endl;
 	cout << "Area: " << myRectangle.getArea() << endl;
 	cout << "Perimeter: " << myRectangle.getPerimeter() << endl;
 	cout << endl;
@@ -30,8 +29,8 @@ int main()
 		cout << endl;
 		cout << "herRectangle:" << endl;
 		cout << "------------" << endl;
-		cout << "Width: " << width << endl;
-		cout << "Height: " << height << endl;
+		cout << "Width: " << myRectangle.getWidth() << endl;
+		cout << "Height: " << myRectangle.getHeight() << endl;
 		cout << "Area: " << herRectangle.getArea() << endl;
 		cout << "Perimeter: " << herRectangle.getPerimeter() << endl;
 		cout << endl;

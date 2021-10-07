@@ -1,81 +1,17 @@
-#ifndef RECTANGLE
-#define RECTANGLE
-
-#include <iostream>
+#pragma once
 #include <string>
-using namespace std;
 
 class Rectangle {
 	private: 
-		double height;
-		double width;
+		double height, width;
 	public:
-		//Rectangle();
-		//Rectangle(double height, double width);
-		//void setHeight(double);
-		//void setWidth(double);
-		//void printRectangle(string rectName);
-
-		Rectangle() {
-			height = 1;
-			width = 1;
-		}
-
-		Rectangle(double h, double w) //user defines h and w and we will assign it to our variables
-		{
-			setHeight(h);
-			setWidth(w);
-		}
-
-		void setHeight(double h)
-		{
-			if (h > 0)
-				height = h;
-			else
-			{
-				cout << "invalid height";
-				exit(EXIT_FAILURE);
-			}
-		}
-
-		void setWidth(double w)
-		{
-			if (w > 0)
-				width = w;
-			else
-			{
-				cout << "invalid width";
-				exit(EXIT_FAILURE);
-			}
-		}
-
-		void printRectangle(string rectName)
-		{
-			cout << "Rectangle " << rectName << " is " << width << " units wide and " << height << " units high." << endl << endl;
-		}
-
-
-		//getter functions
-		double getHeight() const //getters we want to preserve values and just get them so we use const
-		{
-			return height;
-		}
-
-		double getWidth() const //getters we want to preserve values and just get them so we use const
-		{
-			return width;
-		}
-
-		double getArea() const //getters we want to preserve values and just get them so we use const
-		{
-			return height * width;
-		}
-
-		double getPerimeter() const //getters we want to preserve values and just get them so we use const
-		{
-			return (height * 2) + (width * 2);
-		}
-
+		Rectangle();
+		Rectangle(double height, double width);//user defines h and w and we will assign it to our variables
+		double getWidth() const { return width; }; //getters we want to preserve values and just get them so we use const
+		double getHeight() const { return height; };//getters we want to preserve values and just get them so we use const
+		double getArea();
+		double getPerimeter();
+		void setHeight(double);
+		void setWidth(double);
+		void printRectangle(std::string rectName);
 };
-
-#endif // !RECTANGLE
